@@ -1,0 +1,296 @@
+/* Estilo base */
+
+:root {
+    --secondary-color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #000000;
+}
+
+
+/* Cabeçalho */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #ffffff;
+    color: #7d007d;
+    text-align: center;
+    padding: 2rem 10rem;
+}
+
+/* Categorias */
+
+.nav__logo {
+    max-width: 150px;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    list-style: none;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #7d007d;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.link a:hover::after {
+    width: 50%;
+}
+
+.logout-button img {
+    width: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Frase */
+
+.frase {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: left;
+}
+
+.header__content h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00467D;
+}
+
+.header__content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: #7d007d;
+
+}
+
+.header__content h1 span {
+    -webkit-text-fill-color: #000000;
+    -webkit-text-stroke: 3px var(#7d007d);
+}
+
+.header__content p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+/* Imagens */
+
+.header__image {
+    position: relative;
+}
+
+.header__image::before {
+    content: "JOB";
+    position: absolute;
+    top: 200%;
+    left: 400%;
+    transform: translateX(-50%);
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--secondary-color);
+    opacity: 0.5;
+}
+
+.header__image img {
+    max-width: 200px;
+    margin: auto;
+}
+
+.logout-button img {
+    max-width: 30px;
+    margin: auto;
+}
+
+/* Barra de busca */
+.busca {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    gap: 0.5rem;
+}
+
+.busca input {
+    padding: 0.6rem;
+    width: 300px;
+    border: 1px solid #7d007d;
+    border-radius: 10px;
+}
+
+.busca button {
+    padding: 0.6rem 1rem;
+    background-color: #7d007d;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background-color: #7d007d9d;
+}
+
+/* Lista de vagas */
+main {
+    max-width: 800px;
+    padding: 1rem;
+    margin: 0 auto;
+    /* centraliza o main */
+}
+
+.lista-vagas {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-vagas li {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #7d007d;
+}
+
+.lista-vagas h3 {
+    margin-top: 0;
+}
+
+.lista-vagas a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #7d007d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lista-vagas a:hover {
+    text-decoration: underline;
+}
+
+.lista-vagas h2 {
+    color: #7d007d;
+}
+
+/* Rodapé */
+
+.rodape {
+  background-color: #7d007d;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 5rem 10%;
+  color: white;
+  text-align: left;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+.esquerda,
+.direita {
+  flex: 1;
+  min-width: 200px;
+}
+
+.conteudo-central {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.Perfil__member {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.Perfil__member img {
+    max-width: 60px;
+    border-radius: 100%;
+}
+
+.Perfil__member__details h4 {
+    margin-bottom: 0;
+}
+
+.inscreva-se {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    gap: 0.5rem;
+}
+
+.inscreva-se input {
+    padding: 0.6rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.inscreva-se button {
+    padding: 0.6rem 1rem;
+    background-color: #ffffff;
+    color: #7d007d;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inscreva-se button:hover {
+    background-color: #f1f1f1cb;
+}
+
+.termos a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #298000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#copy {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.termos {
+    background-color: #7d007d;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0.5rem;
+  
+}
